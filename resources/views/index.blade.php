@@ -15,10 +15,12 @@
     <h4>Tempat Penyewaan Playstation Terbaik dan Terpercaya</h4>
     <h1><span>MAINKAN</span> GAME IMPIANMU DISINI</h1>
     <p>Telusuri dunia gaming dengan pengalaman bermain yang mendalam bersama sewa PlayStation terbaik kami! Tingkatkan sesi gaming Anda ke level baru tanpa harus berkomitmen untuk membeli. Di "PlayStation Haven," kami menyediakan konsol terbaru, perpustakaan game yang luas, dan aksesori untuk menciptakan tempat bermain ultimate di ruang Anda sendiri.</p>
+    <a href="/login">
     <button class="btn">Mulai Bermain</button>
+    </a>
   </div>
   <div class="header__image">
-    <img src="{{asset('assets/esport.png')}}" alt="header" />
+    <img src="{{asset('assets/esport.png')}}" class="hidden lg:block" alt="header" />
   </div>
 </header>
 

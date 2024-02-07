@@ -15,7 +15,7 @@ class GamesController extends Controller
         $games = Games::query()->get();
         return Response()->view('game.index', ['games' => $games]);
     }
-    
+
     public function indexAdd(Request $request)
     {
         return Response()->view('game.add');
@@ -40,7 +40,7 @@ class GamesController extends Controller
      * Display the specified resource.
      */
     public function create(Request $request, Games $games)
-    {   
+    {
         $imageName = '';
         if (!empty($request->file('image'))) {
             $image = $request->file('image');
@@ -50,12 +50,12 @@ class GamesController extends Controller
 
         Games::create([
             'judul' => $request->input('judul'),
-            'genre' => json_encode(['genre'=>$request->input('genre')]),
+            'genre' => json_encode(['genre' => $request->input('genre')]),
             'deskripsi' => $request->input('deskripsi'),
             'image' => $imageName,
             'link' => $request->input('link'),
         ]);
-            
+
         return redirect('/game');
     }
 
@@ -73,6 +73,7 @@ class GamesController extends Controller
         $imageName = '';
         if (!empty($request->file('image'))) {
             $image = $request->file('image');
+            // var_dump($image->getClientOriginalName());
             $imageName = time() . '_' . $image->getClientOriginalName();
             $image->storePubliclyAs('img', $imageName, 'public');
         } else {
@@ -81,7 +82,7 @@ class GamesController extends Controller
 
         Games::where('id', $id)->update([
             'judul' => $request->input('judul'),
-            'genre' => json_encode(['genre'=>$request->input('genre')]),
+            'genre' => json_encode(['genre' => $request->input('genre')]),
             'deskripsi' => $request->input('deskripsi'),
             'image' => $imageName,
             'link' => $request->input('link'),

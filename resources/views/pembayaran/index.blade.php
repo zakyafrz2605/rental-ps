@@ -4,7 +4,7 @@
 
 @section('content')
 <a href="/rental/sewa">
-  <button class="btn btn-primary m-4">Tambah Rental</button>
+  <button class="btn btn-primary m-4">Tambah Transaksi</button>
 </a>
 <div class="overflow-x-auto">
   <table class="table">
@@ -26,7 +26,7 @@
       @if(!empty($p['bukti_pembayaran']))
       <td>
         <button onclick="modal_{{$p['id']}}.showModal()">
-          <img class="max-w-36" src="{{asset('storage/bukti/' . $p['bukti_pembayaran'])}}" alt="">
+          <img class="max-w-36 max-h-36" src="{{asset('storage/bukti/' . $p['bukti_pembayaran'])}}" alt="">
         </button>
       </td>
       @else

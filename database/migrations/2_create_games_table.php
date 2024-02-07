@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
-            $table->json('genre')->nullable();
+            $table->string('genre')->nullable();
             $table->text('deskripsi')->nullable();
             $table->string('image')->nullable();
             $table->string('link')->nullable();

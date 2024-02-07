@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+
 Route::get('/', fn () => view('index'));
 Route::get('/game', [GamesController::class, 'index']);
 
