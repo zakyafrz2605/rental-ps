@@ -31,10 +31,10 @@
             @endif
             <p class="text-slate-500 text-lg mt-3 place-self-start">{{ $genre['genre'] }}</p>
         </div>
-        @if(empty($g['deskripsi']))
+        @if(empty($game[0]['deskripsi']))
         <p class="text-slate-500 text-lg mt-3">Tidak ada deskripsi.</p>
         @else
-        <p class="text-slate-500 text-lg mt-3 truncate">{{$g['deskripsi']}}</p>
+        <p class="text-slate-500 text-lg mt-3 lg:w-4/6">{{$game[0]['deskripsi']}}</p>
         @endif
         @if(!empty($vidLink))
         <iframe src="https://www.youtube.com/embed/{{$vidLink}}" title="YouTube video player" class="w-full aspect-video lg:w-4/6 mt-5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

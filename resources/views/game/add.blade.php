@@ -33,9 +33,9 @@
         </div>
 
         <div>
-          <label for="alamat" class="block text-sm font-medium text-gray-700">Deskripsi</label>
+          <label for="deskripsi" class="block text-sm font-medium text-gray-700">Deskripsi</label>
           <div class="mt-1">
-            <textarea class="textarea textarea-bordered w-full" name="alamat" id="alamat"></textarea>
+            <textarea class="textarea textarea-bordered w-full" name="deskripsi" id="deskripsi"></textarea>
           </div>
         </div>
 

@@ -22,12 +22,28 @@
       <td>{{$r['id_konsol']}}</td>
       <td>{{$r['mulai']}}</td>
       <td>{{$r['selesai']}}</td>
-      <td>
+      <td class="flex gap-2">
+      <button class="btn btn-error" onclick="modal_{{$r['id']}}.showModal()">Hapus</button>
         <a href="/rental/{{$r['id']}}">
           <button class="btn btn-primary">Edit</button>
         </a>
       </td>
     </tr>
+    <dialog id="modal_{{$r['id']}}" class="modal">
+    <div class="modal-box">
+        <h3 class="font-bold text-lg">Peringatan!</h3>
+        <p class="py-4">Ingin menghapus rental {{$r['id']}}?</p>
+        <div class="modal-action">
+        <form method="post" action="/rental/{{$r['id']}}/delete">
+            @csrf
+            <button class="btn btn-error">Hapus</button>
+        </form>
+        <form method="dialog">
+            <button class="btn">Close</button>
+        </form>
+        </div>
+    </div>
+    </dialog>
     @endforeach
     </tbody>
   </table>

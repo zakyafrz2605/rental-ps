@@ -2,7 +2,7 @@
 @section('title', 'Login')
 
 @section('content')
-<div class="min-h-screen bg-gray-100 flex flex-col md:-pt-4 py-6 px-6 lg:px-8 mt-12" id="particles-js">
+<div class="min-h-screen bg-gray-100 flex flex-col md:-pt-4 py-6 px-6 lg:px-8" id="particles-js">
   <div class="sm:mx-auto sm:w-full sm:max-w-md sm:--mt-4 z-10">
     <h2 class="text-center text-3xl font-extrabold text-gray-900">Register</h2>
   </div>
